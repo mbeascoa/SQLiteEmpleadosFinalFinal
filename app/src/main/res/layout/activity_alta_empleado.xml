@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="10dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="10dp"
+    tools:context=".AltaEmpleado">
+
+    <TextView
+        android:id="@+id/lbl_altaempleado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="ALTA EMPLEADO" />
+
+    <EditText
+        android:id="@+id/et_NumeroEmpleado_Alta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce número empleado"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_NombreAlta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce nombre"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_apellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce apellido"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_oficio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce Oficio"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_direccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce dirección"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_fecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce fecha"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/et_salario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce Salario"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_comision"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce comisión"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_NumeroDepartamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce número departamento"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btn_grabaralta"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F4D8D8"
+        android:backgroundTint="#FAF9F9"
+        android:text="GRABAR" />
+
+    <Button
+        android:id="@+id/btn_saliralta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="cerrarVentana"
+        android:text="VOLVER" />
+
+    <TextView
+        android:id="@+id/tv_ResultadoAlta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" />
+
+</LinearLayout>
