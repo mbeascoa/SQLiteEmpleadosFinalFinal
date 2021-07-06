@@ -15,6 +15,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder>  {
     private List<Empleados> listaEmpleados;
 
     public Adaptador(List<Empleados> ListaEmpleado) {
+
         this.listaEmpleados = ListaEmpleado;
     }
 

@@ -27,7 +27,7 @@
         android:inputType="number" />
 
     <EditText
-        android:id="@+id/et_NombreAlta"
+        android:id="@+id/et_Nombre_Alta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -35,7 +35,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/et_apellido"
+        android:id="@+id/et_Apellido_Alta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -43,7 +43,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/et_oficio"
+        android:id="@+id/et_Oficio_Alta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -51,7 +51,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/et_direccion"
+        android:id="@+id/et_Direccion_Alta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -59,7 +59,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/et_fecha"
+        android:id="@+id/et_Fecha_Alta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -67,7 +67,7 @@
         android:inputType="date" />
 
     <EditText
-        android:id="@+id/et_salario"
+        android:id="@+id/et_Salario_Alta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -75,7 +75,7 @@
         android:inputType="number" />
 
     <EditText
-        android:id="@+id/et_comision"
+        android:id="@+id/et_Comision_Alta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -83,7 +83,7 @@
         android:inputType="number" />
 
     <EditText
-        android:id="@+id/et_NumeroDepartamento"
+        android:id="@+id/et_NumeroDepartamento_Alta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -97,6 +97,7 @@
         android:layout_height="wrap_content"
         android:background="#F4D8D8"
         android:backgroundTint="#FAF9F9"
+        android:onClick="grabarBaseDatos"
         android:text="GRABAR" />
 
     <Button

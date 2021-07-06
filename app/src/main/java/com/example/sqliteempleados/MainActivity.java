@@ -27,14 +27,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void alta(View view){
         Intent i = new Intent (this, AltaEmpleado.class);
+        startActivity(i);
 
     }
 
     public void consulta(View view){
         Intent i = new Intent (this, ConsultaEmpleado.class);
+        startActivity(i);
 
     }
     public void crear(View view){
         Intent i = new Intent(this,CrearBaseDatos.class );
+        startActivity(i);
     }
 }

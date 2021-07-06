@@ -53,7 +53,7 @@ public class CrearBaseDatos extends AppCompatActivity {
 
 
         this.resultado.setText("ALTA CORRECTA");
-        Toast.makeText(this, "Resgistro dado de alta correctamente", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Un resgistro inicial dado de alta correctamente", Toast.LENGTH_LONG).show();
 
 
     }

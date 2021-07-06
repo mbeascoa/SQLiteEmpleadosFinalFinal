@@ -18,15 +18,16 @@ public class ConsultaEmpleado extends AppCompatActivity {
 
     private RecyclerView miRecicler;
     private RecyclerView.Adapter miAdapter;
-    ArrayList<String> arrayEmpleados = new ArrayList<>();
-    ArrayList<String> DatosEmpleados = new ArrayList<>();
+    List<Empleados> listadoDeEmpleados = new ArrayList<>();
+
     private static final String TAG = MainActivity.class.getSimpleName();
+    List<Empleados> datosEmpleados = new  ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consulta_empleado);
-        // Buscamos el control para cargar los datos 
+        // Buscamos el control para cargar los datos
         miRecicler = (RecyclerView) findViewById(R.id.RV1);
 
         // Añadimos que  el tamaño del RecyclerView no se cambiará.
@@ -35,44 +36,48 @@ public class ConsultaEmpleado extends AppCompatActivity {
 
         miRecicler.setLayoutManager(new LinearLayoutManager(this));
         //Especificamos el adaptador con la lista a visualizar
-       // DatosEmpleados = recuperarEmpleados();
-       // miAdapter = new Adaptador(DatosEmpleados);
+        listadoDeEmpleados = recuperarEmpleados();
+        miAdapter = new Adaptador(listadoDeEmpleados);
         miRecicler.setAdapter(miAdapter);
 
     }
 
-    /*private List<Empleados> recuperarEmpleados() {
-        ArrayList<String> arrayEmpleados = new ArrayList<>();
+    private List<Empleados> recuperarEmpleados() {
 
         try {
-            //String[] args = new String[]{null};
-            String codigo = "";
-
-
-            BaseDatosHelper usdbh = new BaseDatosHelper(this, "DBContabilidad", null, 1);
+            BaseDatosHelper usdbh = new BaseDatosHelper(this, "DBHospital", null, 1);
 
             SQLiteDatabase db = usdbh.getReadableDatabase();
-            Cursor c = db.rawQuery("SELECT codigo FROM Facturas", null);
+            Cursor c = db.rawQuery("SELECT * FROM Empleados", null);
             //Nos aseguramos de que existe al menos un registro
             if (c.moveToFirst()) {
                 //Recorremos el cursor hasta que no haya más registros
+              //int mCodigoemp,mSalario, mComision,mNumeroDepartamento;
+              // String mNombre, mApellido, mOficio, mDireccion,mFechaAlta;
                 do {
-                    codigo = c.getString(0);
-                    Log.d(TAG, "recuperarFactura numero de código: "+ codigo);
-                    Toast.makeText(this, "recuperarFactura numero de código: "+ codigo, Toast.LENGTH_SHORT).show();
-                    arrayFactura.add(codigo);
+                    int codigoemp = Integer.parseInt(c.getString(c.getColumnIndexOrThrow("codigoemp")));
+                    String nombre= c.getString(c.getColumnIndexOrThrow("nombre"));
+                    String apellido= c.getString(c.getColumnIndexOrThrow("apellido")) ;
+                    String oficio=c.getString(c.getColumnIndexOrThrow("oficio"));
+                    String direccion=c.getString(c.getColumnIndexOrThrow("direccion"));
+                    String fechaalta=c.getString(c.getColumnIndexOrThrow("fechaalta"));
+                    int salario= Integer.parseInt(c.getString(c.getColumnIndexOrThrow("salario")));
+                    int comision=Integer.parseInt(c.getString(c.getColumnIndexOrThrow("comision")));
+                    int numerodepartamento=Integer.parseInt(c.getString(c.getColumnIndexOrThrow("numerodepartamento"))) ;
+                    Empleados emp = new Empleados(codigoemp, nombre, apellido, oficio, direccion, fechaalta, salario, comision, numerodepartamento);
+                    datosEmpleados.add(emp);
+                    Log.d(TAG, emp.toString());
+                    //Toast.makeText(this, emp.toString(), Toast.LENGTH_SHORT).show();
                 } while (c.moveToNext());
             }
 
-            this.mResultadoC.setText("Código usuario:" + codigo);
-            Toast.makeText(this, "Código Usuario " + codigo, Toast.LENGTH_LONG).show();
         } catch (Exception e) {
             System.out.println(e.toString());
 
         }
-        return arrayFactura;
+        return datosEmpleados;
     }
-*/
+
 
     public void cerrarVentana(View view) {
         finish();
