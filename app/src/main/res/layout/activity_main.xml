@@ -12,8 +12,15 @@
         android:id="@+id/btn_crearbasedatos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="crear"
+        android:onClick="crearBaseDatos"
         android:text="CREAR BASE DE DATOS" />
+
+    <Button
+        android:id="@+id/btn_altaempleados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="alta"
+        android:text="ALTA EMPLEADOS" />
 
     <Button
         android:id="@+id/btn_consultar_empleados"
@@ -23,9 +30,38 @@
         android:text="CONSULTA EMPLEADOS" />
 
     <Button
-        android:id="@+id/btn_altaempleados"
+        android:id="@+id/btn_consulta_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="alta"
-        android:text="ALTA EMPLEADOS" />
+        android:onClick="consultaporId"
+        android:text="CONSULTA POR ID" />
+
+    <Button
+        android:id="@+id/btn_consulta_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="consultapornombre"
+        android:text="CONSULTA POR EL NOMBRE" />
+
+    <Button
+        android:id="@+id/btn_modificacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="modificar"
+        android:text="MODIFICACION EMPLEADOS" />
+
+    <Button
+        android:id="@+id/btn_borrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="borrarempleado"
+        android:text="BORRAR EMPLEADO" />
+
+    <Button
+        android:id="@+id/btn_borrar_tabla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="borrartabla"
+        android:text="BORRAR TABLA" />
+
 </LinearLayout>

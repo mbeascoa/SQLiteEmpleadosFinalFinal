@@ -20,9 +20,6 @@ public class MainActivity extends AppCompatActivity {
         btnconsultar= (Button) findViewById(R.id.btn_consultar_empleados);
         btnalta = (Button) findViewById(R.id.btn_altaempleados);
 
-
-
-
     }
 
     public void alta(View view){
@@ -36,8 +33,31 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
 
     }
-    public void crear(View view){
+    public void crearBaseDatos(View view){
         Intent i = new Intent(this,CrearBaseDatos.class );
+        startActivity(i);
+    }
+
+    public void consultaporId(View view){
+        Intent i = new Intent ( this, ConsultaPorId.class);
+        startActivity(i);
+    }
+    public void consultapornombre(View view){
+        Intent i = new Intent ( this, ConsultaPorNombre.class);
+        startActivity(i);
+    }
+
+    public void modificar(View view){
+        Intent i = new Intent( this, Modificar.class);
+        startActivity(i);
+    }
+
+    public void borrarempleado(View view){
+        Intent i = new Intent( this, BorrarEmpleado.class);
+        startActivity(i);
+    }
+    public void borrartabla(View view){
+        Intent i = new Intent( this, BorrarTabla.class);
         startActivity(i);
     }
 }

@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SQLiteEmpleados">
-        <activity android:name=".DetalleEmpleado"></activity>
+        <activity android:name=".BorrarEmpleado"></activity>
+        <activity android:name=".BorrarTabla" />
+        <activity android:name=".Modificar" />
+        <activity android:name=".ConsultaPorNombre" />
+        <activity android:name=".ConsultaPorId" />
+        <activity android:name=".DetalleEmpleado" />
         <activity android:name=".CrearBaseDatos" />
         <activity android:name=".ConsultaEmpleado" />
         <activity android:name=".AltaEmpleado" />

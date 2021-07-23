@@ -3,17 +3,13 @@ package com.example.sqliteempleados;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class CrearBaseDatos extends AppCompatActivity {
@@ -25,7 +21,7 @@ public class CrearBaseDatos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_base_datos);
-        resultado = (TextView) findViewById(R.id.txt_resultado);
+        resultado = (TextView) findViewById(R.id.tv_tablecreada);
 
         BaseDatosHelper usdbh = new BaseDatosHelper(this, "DBHospital", null, 1);
         //Abrimos la base de datos 'DBContabilidad' en modo escritura
