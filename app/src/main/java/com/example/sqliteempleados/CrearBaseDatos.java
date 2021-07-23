@@ -26,7 +26,7 @@ public class CrearBaseDatos extends AppCompatActivity {
         resultado = (TextView) findViewById(R.id.tv_tablecreada);
 
         try {
-            BaseDatosHelper usdbh = new BaseDatosHelper(this, "DBHospital", null, 3);
+            BaseDatosHelper usdbh = new BaseDatosHelper(this, "DBHospital", null, 1);
             //Abrimos la base de datos 'Empleados' en modo escritura
             SQLiteDatabase db = usdbh.getWritableDatabase();
 

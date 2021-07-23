@@ -20,6 +20,7 @@ public class ConsultaPorNombre extends AppCompatActivity {
     private int contador = 0;
     private int indice1 = 0;
     private int indice2 = 0;
+    private int vuelta = 1;
     private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
@@ -96,10 +97,9 @@ public class ConsultaPorNombre extends AppCompatActivity {
                 comcxn.setText(c.getString(c.getColumnIndexOrThrow("comision")));
                 numdecxn.setText(c.getString(c.getColumnIndexOrThrow("numerodepartamento")));
                 feccxn.setText(c.getString(c.getColumnIndexOrThrow("fechaalta")));
-
-                indice2 = datosEmpleados.size() + 1;
-                conta.setText(" Registro " + contador + " de un total de " + indice2);
-                contador = 1;
+                indice1= contador+1;
+                indice2 = datosEmpleados.size();
+                conta.setText(" Registro " + indice1 + " de un total de " + indice2);
                 db.close();
 
             }
@@ -110,22 +110,184 @@ public class ConsultaPorNombre extends AppCompatActivity {
     }
     public void siguiente(View view) {
 
-            contador= 2;
-            codcxn.setText(datosEmpleados.get(contador).getCodigoemp());
-            nomcxn.setText(datosEmpleados.get(contador).getNombre());
-            apecxn.setText(datosEmpleados.get(contador).getApellido());
-            dircxn.setText(datosEmpleados.get(contador).getDireccion());
-            oficxn.setText(datosEmpleados.get(contador).getOficio());
-            salcxn.setText(datosEmpleados.get(contador).getSalario());
-            comcxn.setText(datosEmpleados.get(contador).getComision());
-            feccxn.setText(datosEmpleados.get(contador).getFechaAlta());
-            numdecxn.setText(datosEmpleados.get(contador).getNumeroDepartamento());
-            indice1= contador+1;
-            conta.setText(" Registro " + indice1 + " de un total de " + indice2);
-            contador += 1;
 
+        try {
+            String nomb = consulxnombre.getText().toString();
+            BaseDatosHelper usdbh = new BaseDatosHelper(this, "DBHospital", null, 1);
+            SQLiteDatabase db = usdbh.getReadableDatabase();
+
+            String[] args = new String[]{nomb};
+            String sql = "Select * from Empleados where nombre =?";
+            Cursor c = db.rawQuery(sql, args);
+
+
+            if (c.moveToFirst()) {
+                if (vuelta <= datosEmpleados.size()) {
+
+
+                    switch (vuelta) {
+                        // declaración case
+                        // los valores deben ser del mismo tipo de la expresión
+                        case 0:
+                            c.moveToNext();
+                            obtener(c);
+                            vuelta += 1;
+                            break; // break es opcional
+                        case 1:
+                            c.moveToNext();
+                            obtener(c);
+                            conta.setText(" Registro 2 de  un total de " + indice2);
+                            vuelta += 1;
+                            break; // break es opcional
+
+                        case 2:
+                            c.moveToNext();
+                            c.moveToNext();
+                            obtener(c);
+                            conta.setText(" Registro 3 de  un total de " + indice2);
+                            vuelta += 1;
+                            break; // break es opcional
+                        case 3:
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToNext();
+                            obtener(c);
+                            conta.setText(" Registro 4 de  un total de " + indice2);
+                            vuelta += 1;
+                            break; // break es opcional
+                        case 4:
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToNext();
+                            obtener(c);
+                            conta.setText(" Registro 5 de  un total de " + indice2);
+                            vuelta += 1;
+                            break; // break es opcional
+                        case 5:
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToNext();
+                            obtener(c);
+                            vuelta += 1;
+                            break; // break es opcional
+                        default:
+                            conta.setText(" Navegue con el siguiente o anterior,  sólo se muestran 5 resultados");
+                            break;
+                    }
+                }
+            }
+        } catch (Exception e){
+                    Log.d(TAG, "ERROR: " + e.toString());
+                }
 
     }
+
+    public void anterior(View view) {
+
+
+        try {
+            String nomb = consulxnombre.getText().toString();
+            BaseDatosHelper usdbh = new BaseDatosHelper(this, "DBHospital", null, 1);
+            SQLiteDatabase db = usdbh.getReadableDatabase();
+
+            String[] args = new String[]{nomb};
+            String sql = "Select * from Empleados where nombre =?";
+            Cursor c = db.rawQuery(sql, args);
+
+
+            if (c.moveToFirst()) {
+                if ((vuelta <= datosEmpleados.size()) && (vuelta>=0 )) {
+                    switch (vuelta) {
+                        // declaración case
+                        // los valores deben ser del mismo tipo de la expresión
+                        case 1:
+                            c.moveToNext();
+                            c.moveToPrevious();
+                            obtener(c);
+                            conta.setText(" Registro 2");
+                            vuelta -= 1;
+                            break; // break es opcional
+
+                        case 2:
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToPrevious();
+                            obtener(c);
+                            conta.setText(" Registro 3");
+                            vuelta -= 1;
+                            break; // break es opcional
+                        case 3:
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToPrevious();
+                            obtener(c);
+                            conta.setText(" Registro 4 ");
+                            vuelta -= 1;
+                            break; // break es opcional
+                        case 4:
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToPrevious();
+                            obtener(c);
+                            conta.setText(" Registro 5");
+                            vuelta -= 1;
+                            break; // break es opcional
+                        case 5:
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToNext();
+                            c.moveToNext();
+                            obtener(c);
+                            conta.setText(" Registro 6");
+                            vuelta -= 1;
+                            break; // break es opcional
+                        default:
+                            conta.setText("  Navegue con el siguiente o anterior,  sólo se muestran 5 resultados");
+                            break;
+                    }
+                }
+            }
+        } catch (Exception e){
+            Log.d(TAG, "ERROR: " + e.toString());
+        }
+
+    }
+
+    private void obtener(Cursor c){
+
+        codcxn.setText(c.getString(c.getColumnIndexOrThrow("codigoemp")));
+        nomcxn.setText(c.getString(c.getColumnIndexOrThrow("nombre")));
+        apecxn.setText(c.getString(c.getColumnIndexOrThrow("apellido")));
+        oficxn.setText(c.getString(c.getColumnIndexOrThrow("oficio")));
+        dircxn.setText(c.getString(c.getColumnIndexOrThrow("direccion")));
+        salcxn.setText(c.getString(c.getColumnIndexOrThrow("salario")));
+        comcxn.setText(c.getString(c.getColumnIndexOrThrow("comision")));
+        numdecxn.setText(c.getString(c.getColumnIndexOrThrow("numerodepartamento")));
+        feccxn.setText(c.getString(c.getColumnIndexOrThrow("fechaalta")));
+                    /*codcxn.setText(datosEmpleados.get(contador).getCodigoemp());
+                    nomcxn.setText(datosEmpleados.get(contador).getNombre());
+                    apecxn.setText(datosEmpleados.get(contador).getApellido());
+                    dircxn.setText(datosEmpleados.get(contador).getDireccion());
+                    oficxn.setText(datosEmpleados.get(contador).getOficio());
+                    salcxn.setText(datosEmpleados.get(contador).getSalario());
+                    comcxn.setText(datosEmpleados.get(contador).getComision());
+                    feccxn.setText(datosEmpleados.get(contador).getFechaAlta());
+                    numdecxn.setText(datosEmpleados.get(contador).getNumeroDepartamento());
+                    indice1= contador+1;
+                    conta.setText(" Registro " + indice1 + " de un total de " + indice2);
+                    contador += 1;
+
+                     */
+
+    }
+
 
     public void cerrarVentana(View view) {
         finish();

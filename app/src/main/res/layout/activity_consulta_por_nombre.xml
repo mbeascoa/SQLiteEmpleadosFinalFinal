@@ -246,12 +246,27 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_siguiente"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="siguiente"
-        android:text="Siguiente" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_anterior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="anterior"
+            android:text="ANTERIOR" />
+
+        <Button
+            android:id="@+id/btn_siguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="siguiente"
+            android:text="SIGUIENTE" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_salir_cosultapornombre"
