@@ -32,6 +32,7 @@
         android:id="@+id/btn_consultarporid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="consultarDatos"
         android:text="CONSULTAR POR ID" />
 
     <TextView
@@ -49,14 +50,14 @@
     android:paddingTop="8dp">
 
     <TextView
-        android:id="@+id/tv_nombre_detalle"
+        android:id="@+id/tv_nombre_consultaporid"
         android:layout_width="24dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Nombre" />
 
     <TextView
-        android:id="@+id/et_nombre_detalle"
+        android:id="@+id/et_nombre_consultaporid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -71,14 +72,14 @@
     android:paddingTop="8dp">
 
     <TextView
-        android:id="@+id/tv_apellidos_detalle"
+        android:id="@+id/tv_apellidos_consultaporid"
         android:layout_width="24dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Apellidos" />
 
     <TextView
-        android:id="@+id/et_apellido_detalle"
+        android:id="@+id/et_apellido_consultaporid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -94,14 +95,14 @@
     android:paddingTop="8dp">
 
     <TextView
-        android:id="@+id/tv_oficio_detalle"
+        android:id="@+id/tv_oficio_consultaporid"
         android:layout_width="24dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Oficio" />
 
     <TextView
-        android:id="@+id/et_oficio_detalle"
+        android:id="@+id/et_oficio_consultaporid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -116,14 +117,14 @@
     android:paddingTop="8dp">
 
     <TextView
-        android:id="@+id/tv_direccion_detalle"
+        android:id="@+id/tv_direccion_consultaporid"
         android:layout_width="24dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Dirección" />
 
     <TextView
-        android:id="@+id/et_direccion_detalle"
+        android:id="@+id/et_direccion_consultaporid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -139,14 +140,14 @@
     android:paddingTop="8dp">
 
     <TextView
-        android:id="@+id/tv_salario_detalle"
+        android:id="@+id/tv_salario_consultaporid"
         android:layout_width="24dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Salario " />
 
     <TextView
-        android:id="@+id/editTextNumber"
+        android:id="@+id/et_salario_consultaporid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -184,14 +185,14 @@
     android:paddingTop="8dp">
 
     <TextView
-        android:id="@+id/tv_numero_departamento_detalle"
+        android:id="@+id/tv_numero_departamento_consultaporid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Número Departamento" />
 
     <TextView
-        android:id="@+id/et_numero_departamento_detalle"
+        android:id="@+id/et_numero_departamento_consultaporid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -224,6 +225,7 @@
         android:id="@+id/btn_salir_consultaporid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="cerrarVentana"
         android:text="SALIR" />
 
 </LinearLayout>

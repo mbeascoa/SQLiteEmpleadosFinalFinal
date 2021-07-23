@@ -25,14 +25,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="textAutoComplete"
         android:paddingBottom="18dp" />
 
     <Button
         android:id="@+id/btn_consultarporid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="consultarDatos"
         android:text="CONSULTAR POR NOMBRE" />
+
+    <TextView
+        android:id="@+id/tv_contador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/lbl_navegacion_empleado"
@@ -40,6 +46,25 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="DETALLES EMPLEADO" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_id_consultapornombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Identificador" />
+
+        <TextView
+            android:id="@+id/et_id_consultapornombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -210,7 +235,7 @@
             android:layout_width="24dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="Fecha Alta" />
 
         <TextView
             android:id="@+id/et_fechacosultapornombre"
@@ -222,9 +247,17 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btn_siguiente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="siguiente"
+        android:text="Siguiente" />
+
+    <Button
         android:id="@+id/btn_salir_cosultapornombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="cerrarVentana"
         android:text="SALIR" />
 
 </LinearLayout>

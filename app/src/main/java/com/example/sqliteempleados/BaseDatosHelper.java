@@ -7,14 +7,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 
 public class BaseDatosHelper extends SQLiteOpenHelper {
-   /*Sentencia SQL para crear la tabla de Usuarios
-   Se evidencia en el código anterior la creación de una tabla denominada Usuarios, almacenando la sentencia SQL,
+   /*Sentencia SQL para crear la tabla de Empleados
+   Se evidencia en el código anterior la creación de una tabla denominada Empleados, almacenando la sentencia SQL,
     como un String en la variable sqlCreate, luego esta varible será implementada por el método execSQL, que recibe
     el String de la sentencia SQL a ejecutar, por medio de la implementación de la variable db de tipo SQLiteDatabase,
     que se usa en los dos métodos anteriores.
     */
 
-    String sqlCreate = "CREATE TABLE Empleados (codigoemp INTEGER,  nombre TEXT, apellido TEXT, oficio TEXT, direccion TEXT, fechaalta TEXT, salario INTEGER, comision INTEGER, numerodepartamento INTEGER)";
+
+       String sqlCreate = "CREATE TABLE Empleados (codigoemp INTEGER,  nombre TEXT, apellido TEXT, oficio TEXT, direccion TEXT, fechaalta TEXT, salario INTEGER, comision INTEGER, numerodepartamento INTEGER)";
 
     public BaseDatosHelper(Context contexto, String nombre, SQLiteDatabase.CursorFactory factory, int version) {
         super(contexto, nombre, factory, version);
@@ -31,7 +32,7 @@ public class BaseDatosHelper extends SQLiteOpenHelper {
 //      Sin embargo lo normal será que haya que migrar datos de la tabla antigua
 //      a la nueva, por lo que este método debería ser más elaborado.
 //Se elimina la versión anterior de la tabla
-        db.execSQL("DROP TABLE IF EXISTS Usuarios");
+        db.execSQL("DROP TABLE IF EXISTS Empleados");
 //Se crea la nueva versión de la tabla
         db.execSQL(sqlCreate);
     }

@@ -12,232 +12,254 @@
     android:paddingBottom="8dp"
     tools:context=".ConsultaPorNombre">
 
-    <TextView
-        android:id="@+id/lbl_modificar"
+    <ScrollView
+        android:id="@+id/sv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="INTRODUZCA EL ID"
-        android:textSize="18sp" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/et_modificar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:paddingBottom="18dp" />
-
-    <Button
-        android:id="@+id/btn_consultar_modificar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CONSULTAR POR ID PARA MODIFICAR" />
-
-    <TextView
-        android:id="@+id/lbl_navegacion_empleado"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="DETALLES EMPLEADO" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#F4F2F2"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
-
-        <TextView
-            android:id="@+id/tv_nombre_modificar"
-            android:layout_width="24dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Nombre" />
+            android:orientation="vertical" >
 
-        <EditText
-            android:id="@+id/et_nombre_modificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
+            <TextView
+                android:id="@+id/lbl_modificar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="INTRODUZCA EL ID"
+                android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/tv_apellidos_modificar"
-            android:layout_width="24dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Apellidos" />
+            <EditText
+                android:id="@+id/et_modificar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:paddingBottom="18dp" />
 
-        <EditText
-            android:id="@+id/et_apellido_modificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName" />
+            <Button
+                android:id="@+id/btn_consultarid_modificar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="consultarDatos"
+                android:text="CONSULTAR POR ID PARA MODIFICAR" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/lbl_navegacion_empleado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="DETALLES EMPLEADO" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#F4F2F2"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4F2F2"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
 
-        <TextView
-            android:id="@+id/tv_oficio_modificar"
-            android:layout_width="24dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Oficio" />
+                <TextView
+                    android:id="@+id/tv_nombre_modificar"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nombre" />
 
-        <EditText
-            android:id="@+id/et_oficio_modificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName" />
+                <EditText
+                    android:id="@+id/et_nombre_modificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
 
-    </LinearLayout>
+            </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
 
-        <TextView
-            android:id="@+id/tv_direccion_modificar"
-            android:layout_width="24dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Dirección" />
+                <TextView
+                    android:id="@+id/tv_apellidos_modificar"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Apellidos" />
 
-        <EditText
-            android:id="@+id/et_direccion_modificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName" />
+                <EditText
+                    android:id="@+id/et_apellido_modificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
 
-    </LinearLayout>
+            </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#F4F2F2"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4F2F2"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
 
-        <TextView
-            android:id="@+id/tv_salario_modificar"
-            android:layout_width="24dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Salario " />
+                <TextView
+                    android:id="@+id/tv_oficio_modificar"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Oficio" />
 
-        <EditText
-            android:id="@+id/et_salario_modificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="number" />
+                <EditText
+                    android:id="@+id/et_oficio_modificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
 
-    </LinearLayout>
+            </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
 
-        <TextView
-            android:id="@+id/tv_comision_modificar"
-            android:layout_width="24dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Comision" />
+                <TextView
+                    android:id="@+id/tv_direccion_modificar"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dirección" />
 
-        <EditText
-            android:id="@+id/et_comision_modificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="number" />
+                <EditText
+                    android:id="@+id/et_direccion_modificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
 
-    </LinearLayout>
+            </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#F4F2F2"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4F2F2"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
 
-        <TextView
-            android:id="@+id/tv_numero_departamento_modificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Número Departamento" />
+                <TextView
+                    android:id="@+id/tv_salario_modificar"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Salario " />
 
-        <EditText
-            android:id="@+id/et_numero_departamento_modificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="number|textPersonName" />
-    </LinearLayout>
+                <EditText
+                    android:id="@+id/et_salario_modificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_fecha_modificar"
-            android:layout_width="24dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
 
-        <EditText
-            android:id="@+id/et_fechamodificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="date" />
+                <TextView
+                    android:id="@+id/tv_comision_modificar"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Comision" />
 
-    </LinearLayout>
+                <EditText
+                    android:id="@+id/et_comision_modificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number" />
 
-    <Button
-        android:id="@+id/btn_consultar_modificar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="MODIFICAR" />
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_salir_modificar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SALIR" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4F2F2"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_numero_departamento_modificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Número Departamento" />
+
+                <EditText
+                    android:id="@+id/et_numero_departamento_modificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number|textPersonName" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_fecha_modificar"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fecha de Alta " />
+
+                <EditText
+                    android:id="@+id/et_fechamodificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="date" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_consultar_modificar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="actualizarDato"
+                android:text="MODIFICAR" />
+
+            <Button
+                android:id="@+id/btn_salir_modificar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="cerrarVentana"
+                android:text="SALIR" />
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="cerrarVentana"
     android:orientation="vertical"
     tools:context=".BorrarEmpleado">
 
@@ -20,12 +21,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberPassword" />
+        android:inputType="number" />
 
     <Button
         android:id="@+id/btn_borrar_empleado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="borrarDato"
         android:text="BORRAR EMPLEADO" />
 
     <TextView

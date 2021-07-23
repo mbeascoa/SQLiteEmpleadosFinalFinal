@@ -14,14 +14,17 @@ public class BorrarTabla extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_borrar_tabla);
-        BaseDatosHelper usdbh = new BaseDatosHelper(this, "Empleados", null, 1);
+        resultadoBorrarTabla = (TextView) findViewById(R.id.tv_resultadoborrartabla);
+        }
+
+
+    public void borrarTabla(View view) {
+        BaseDatosHelper usdbh = new BaseDatosHelper(this, "DBHospital", null, 1);
         SQLiteDatabase db = usdbh.getWritableDatabase();
         db.execSQL("DROP TABLE IF EXISTS Empleados");
+        resultadoBorrarTabla.setText("Se ha borrado correctamente la tabla ");
         db.close();
-        resultadoBorrarTabla = (TextView) findViewById(R.id.tv_resultadoborrartabla);
-        resultadoBorrarTabla.setText("Se ha borrado la tabla");
-
-        }
+    }
 
     public void cerrarVentana(View view) {
         finish();

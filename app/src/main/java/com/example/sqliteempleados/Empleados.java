@@ -47,7 +47,7 @@ public class Empleados {
     }
 
     public int getNumeroDepartamento() {
-        return mNumeroDepartamento;
+        return this.mNumeroDepartamento;
     }
 
     public void setNumeroDepartamento(int mNumeroDepartamento) {
@@ -58,7 +58,7 @@ public class Empleados {
         return this.mNombre;
     }
 
-    public void setmNombre(String mNombre) {
+    public void setNombre(String mNombre) {
         this.mNombre = mNombre;
     }
 
