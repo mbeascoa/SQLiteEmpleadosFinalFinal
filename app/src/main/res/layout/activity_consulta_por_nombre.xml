@@ -29,11 +29,33 @@
         android:paddingBottom="18dp" />
 
     <Button
-        android:id="@+id/btn_consultarporid"
+        android:id="@+id/btn_consultarpornombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="consultarDatos"
         android:text="CONSULTAR POR NOMBRE" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_anterior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="anterior"
+            android:text="ANTERIOR" />
+
+        <Button
+            android:id="@+id/btn_siguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="siguiente"
+            android:text="SIGUIENTE" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_contador"
@@ -252,27 +274,19 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btn_anterior"
+            android:id="@+id/btn_otraconsulta_cosultapornombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="anterior"
-            android:text="ANTERIOR" />
-
+            android:onClick="otraconsulta"
+            android:text="OTRA CONSULTA" />
         <Button
-            android:id="@+id/btn_siguiente"
+            android:id="@+id/btn_salir_cosultapornombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="cerrarVentana"
             android:layout_weight="1"
-            android:onClick="siguiente"
-            android:text="SIGUIENTE" />
+            android:text="SALIR" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_salir_cosultapornombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="cerrarVentana"
-        android:text="SALIR" />
 
 </LinearLayout>

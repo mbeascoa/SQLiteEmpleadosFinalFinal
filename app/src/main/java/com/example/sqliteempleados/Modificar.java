@@ -91,7 +91,10 @@ public class Modificar extends AppCompatActivity {
             actualizaReg.put("numerodepartamento", numdep);
             actualizaReg.put("fechaalta", fecha);
             //Actualizamos el registroenla base de datos
-            db.update("Empleados", actualizaReg, id, null);
+            String[] args = new String[]{id};
+            db.update("Empleados", actualizaReg, "codigoemp =?", args);
+
+
             db.close();
         }catch(Exception e) {
              Log.d(TAG, "ERROR: " + e.toString());

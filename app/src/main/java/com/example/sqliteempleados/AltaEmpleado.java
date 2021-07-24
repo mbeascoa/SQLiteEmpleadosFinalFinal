@@ -3,12 +3,14 @@ package com.example.sqliteempleados;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -80,6 +82,10 @@ public class AltaEmpleado extends AppCompatActivity {
 
     public void accionAceptar() {
         try {
+            InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+
+            inputMethodManager.hideSoftInputFromWindow(mNumeroDepartamento.getWindowToken(), 0);
+
             mensajePersonalizado("Insertando Registro, gracias");
             BaseDatosHelper usdbh = new BaseDatosHelper(this, "DBHospital", null, 1);
             //Abrimos la base de datos 'DBContabilidad' en modo escritura

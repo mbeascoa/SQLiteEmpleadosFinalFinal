@@ -2,11 +2,13 @@ package com.example.sqliteempleados;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -39,6 +41,10 @@ public class ConsultaPorId extends AppCompatActivity {
     public void consultarDatos(View view) {
         try {
             String id = consulxid.getText().toString();
+            //Escondemos el teclado al pulsa el boton consultar
+            InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(consulxid.getWindowToken(), 0);
+
             BaseDatosHelper usdbh = new BaseDatosHelper(this, "DBHospital", null, 1);
             SQLiteDatabase db = usdbh.getReadableDatabase();
 
