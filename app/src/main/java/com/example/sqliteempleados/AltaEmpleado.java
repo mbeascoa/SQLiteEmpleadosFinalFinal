@@ -23,7 +23,7 @@ public class AltaEmpleado extends AppCompatActivity {
     String codigoemp, nombre, apellido, oficio, direccion, fechaalta , salario, comision,numerodepartamento;
     SQLiteDatabase db=null;
     private Validaciones objetoValidar;  //objeto de nuestra clase validaciones
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = AltaEmpleado.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

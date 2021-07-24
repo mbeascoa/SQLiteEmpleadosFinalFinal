@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class Modificar extends AppCompatActivity {
     private EditText consulxid,  nommod, apemod, ofimod, dirmod,salmod, commod,numdepmod, fechamod;
     private Button consultarxid, salir, modificar;
-    private final static String TAG = "Modificar: ";
+    private static final String TAG = Modificar.class.getSimpleName();
 
 
     @Override

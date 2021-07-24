@@ -22,6 +22,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_codigo_detalle"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Código" />
+
+        <TextView
+            android:id="@+id/et_codigo_detalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="#F4F2F2"
         android:orientation="horizontal"
         android:paddingTop="8dp">
@@ -33,13 +52,11 @@
             android:layout_weight="1"
             android:text="Nombre" />
 
-        <EditText
+        <TextView
             android:id="@+id/et_nombre_detalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName" />
+            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -56,13 +73,11 @@
             android:layout_weight="1"
             android:text="Apellidos" />
 
-        <EditText
+        <TextView
             android:id="@+id/et_apellido_detalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName" />
+            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -80,13 +95,11 @@
             android:layout_weight="1"
             android:text="Oficio" />
 
-        <EditText
+        <TextView
             android:id="@+id/et_oficio_detalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName" />
+            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -103,13 +116,11 @@
             android:layout_weight="1"
             android:text="Dirección" />
 
-        <EditText
+        <TextView
             android:id="@+id/et_direccion_detalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName" />
+            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -127,13 +138,11 @@
             android:layout_weight="1"
             android:text="Salario " />
 
-        <EditText
-            android:id="@+id/editTextNumber"
+        <TextView
+            android:id="@+id/et_salario_detalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="number" />
+            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -150,13 +159,11 @@
             android:layout_weight="1"
             android:text="Comision" />
 
-        <EditText
-            android:id="@+id/editTextNumber2"
+        <TextView
+            android:id="@+id/et_comision_detalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="number" />
+            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -174,13 +181,11 @@
             android:layout_weight="1"
             android:text="Número Departamento" />
 
-        <EditText
-            android:id="@+id/editTextTextPersonName5"
+        <TextView
+            android:id="@+id/et_numdepartam_detalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="number|textPersonName" />
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
@@ -194,23 +199,15 @@
             android:layout_width="24dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="Fecha Alta " />
 
-        <EditText
+        <TextView
             android:id="@+id/et_fechaalta_detalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="date" />
+            android:layout_weight="1" />
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_modificar_detalle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="MODIFICAR" />
 
     <Button
         android:id="@+id/btn_salir_detalle"

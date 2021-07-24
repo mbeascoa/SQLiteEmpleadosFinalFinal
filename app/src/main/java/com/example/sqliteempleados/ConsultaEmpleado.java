@@ -20,7 +20,7 @@ public class ConsultaEmpleado extends AppCompatActivity {
     private RecyclerView.Adapter miAdapter;
     List<Empleados> listadoDeEmpleados = new ArrayList<>();
 
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = ConsultaEmpleado.class.getSimpleName();
     List<Empleados> datosEmpleados = new  ArrayList<>();
 
     @Override

@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class BorrarTabla extends AppCompatActivity {
     private TextView resultadoBorrarTabla;
+    private static final String TAG = BorrarTabla.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

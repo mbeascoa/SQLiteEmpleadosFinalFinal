@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 
 public class BorrarEmpleado extends AppCompatActivity {
+    private static final String TAG = BorrarEmpleado.class.getSimpleName();
     private EditText consulxid;
     private TextView resultado;
 
@@ -35,6 +37,7 @@ public class BorrarEmpleado extends AppCompatActivity {
         db.delete(tabla, whereClause, whereArgs);
         db.close();
         resultado.setText("Registro borrado , muchas gracias");
+        Log.i(TAG, "Registro borrado , muchas gracias");
     }
 
     public void cerrarVentana(View view) {
